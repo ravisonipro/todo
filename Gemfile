@@ -5,8 +5,8 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# Use Postgres as the database for Active Record
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -42,6 +42,7 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'pry'
 end
 
 group :test do
@@ -54,3 +55,33 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# For User Authentication
+gem 'devise'
+
+# Very simple Roles library without any authorization enforcement supporting scope on resource object.
+gem "rolify"
+
+# BootStrap requirements
+gem 'bootstrap', '~> 5.1'
+
+
+#Bootstrap JavaScript depends on jQuery. If you're using Rails 5.1+, add the jquery-rails gem to your Gemfile:
+gem 'jquery-rails'
+
+
+#rake 
+gem 'rake', '~> 13.0', '>= 13.0.6'
+
+#To make nested forms
+gem 'cocoon', '~> 1.2', '>= 1.2.15'
+
+# for upload files
+gem 'carrierwave', '~> 2.0'
+
+#In order to crop and scale images, we need a separate tool. 
+#Out of the box Carrierwave has support for RMagick and MiniMagick gems that, in turn, 
+#are used to manipulate images with the help of ImageMagick.
+gem 'mini_magick'
+
+gem "github_api"

@@ -1,0 +1,7 @@
+console.log(<%= @user.status %>);
+<% if @user.status == true %>
+    $(".user-<%= @user.status %> > a").html('Deactivate').removeClass('btn-warning').addClass('btn-success')
+<% else %>
+    $(".user-<%= @user.status %> > a").html('activate').removeClass('btn-success').addClass('btn-warning')
+<% end %>
+$("#user-status-<%= @user.status %>").html("<%= @user.status %>")

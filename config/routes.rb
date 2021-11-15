@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :locations
+  resources :events 
+  resources :tasks
+  devise_for :users, :controllers => { registrations: 'users/registrations' }
+  
+  resources :users do
+    member { patch :activate }
+    member { patch :deactivate }
+  end
+  
+  
+
+  root 'welcome#index'
+
+
 end
+

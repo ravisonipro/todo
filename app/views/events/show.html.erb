@@ -1,0 +1,41 @@
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<br>
+<br>
+<br>
+
+<div class="container">
+  <%= image_tag(@event.avatar.url, size: '200', alt: 'Image') if @event.avatar? %> <h1>
+</div>
+
+<br>
+<br>
+<br>
+
+<h2>
+  <strong>title:</strong>
+  <%= @event.title %>
+</h2>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>location:</strong>
+  <%= @event.location %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
+
+

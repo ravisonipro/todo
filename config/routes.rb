@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   
 
   root 'welcome#index'
+  get "about_us", to: "welcome#about_us"
+  get "contact_us", to: "welcome#contact_us"
+  get "weather_forcast", to: "welcome#weather_forcast"
 
 
 end

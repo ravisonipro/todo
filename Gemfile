@@ -84,4 +84,4 @@ gem 'carrierwave', '~> 2.0'
 #are used to manipulate images with the help of ImageMagick.
 gem 'mini_magick'
 
-gem "github_api"
+gem 'json', '~> 2.6', '>= 2.6.1'

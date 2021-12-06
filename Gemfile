@@ -85,3 +85,5 @@ gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 
 gem 'json', '~> 2.6', '>= 2.6.1'
+
+gem "font-awesome-rails"
